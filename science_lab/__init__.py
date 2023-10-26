@@ -1,3 +1,4 @@
+#This is the dictionary that stores all the keys and values for the code
 main_line = { 
     "dictA" : {
     "time": int,
@@ -22,11 +23,16 @@ main_line = {
     "smell": str,
     "temp": float 
     }
+    ,
+
 
 }
 
+#This array makes it easier to call back the nested dictionaries later
 dictionary_keys = ["dictA", "dictB", "dictC"]
 
+#This loop goees through the number of nested dictionaries and asked for the users information
+#Later I plan on expanding this so the user can choose to add nested dictionaries so more data can be put it and stored
 for i in range(len(dictionary_keys)):
     keys = dictionary_keys[i]
     set_time = int(input("What time are you checking the solution? (in minutes): "))
@@ -40,11 +46,4 @@ for i in range(len(dictionary_keys)):
     set_temp = float(input("What is the temp of the solution?: "))
     main_line[keys]["temp"] = set_temp
 
-    
 print("\nDictionary = \n", main_line)
-
-
-
-
-
-
