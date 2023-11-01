@@ -60,9 +60,12 @@ while True:
         print("Thank you for using the science lab program!")
         break
     
-    
-for i in main_line:
-    print(i + ": ")
+if incriment >= len(dictionary_keys):   
+    for i in main_line:
+        print("")
+        print(i + ": ")
+        print("")
+        for b in main_line[i]:
+            print (b,':',main_line[i][b])
+else:
     print("")
-    for b in main_line[i]:
-        print (b,':',main_line[i][b])
