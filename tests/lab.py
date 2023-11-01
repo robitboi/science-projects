@@ -54,10 +54,15 @@ while True:
     
     move_on = input("\n Would you like to move on?(Yes/No): ")
     
-    if move_on.lower() == "no":
+    incriment = incriment + 1
+
+    if move_on.lower() == "no" or incriment >= len(dictionary_keys):
         print("Thank you for using the science lab program!")
         break
-    incriment = incriment + 1
     
-for i in list(main_line.values()):
-    print("  - " + i)
+    
+for i in main_line:
+    print(i + ": ")
+    print("")
+    for b in main_line[i]:
+        print (b,':',main_line[i][b])
